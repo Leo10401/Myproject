@@ -1,7 +1,8 @@
 import localFont from "next/font/local";
 import "./globals.css";
 
-import Sidebar from "./components/page";
+import Sidebar from "./components/sidebar";
+import { Toaster } from "react-hot-toast";
 
 
 const geistSans = localFont({
@@ -27,6 +28,7 @@ export default function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <Sidebar />
+        <Toaster />
         
         {children}
         
