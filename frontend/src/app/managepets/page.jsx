@@ -47,7 +47,7 @@ const ManagePet = () => {
         <table className='w-full'>
           <thead className='bg-blue-800 text-white text-left'>
             <tr>
-              <th className='p-2'>Pet's name</th>
+              <th className='p-2'>Pet&apos;s name</th>
               <th className='p-2'>Breed</th>
               <th className='p-2'>Age</th>
               <th className='p-2'>Category</th>

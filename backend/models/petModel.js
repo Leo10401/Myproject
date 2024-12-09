@@ -7,7 +7,8 @@ const petSchema = new Schema({
     breed : {type: String},
     image: String,
     detail : {type: String},
-    adoptedin: { type: Date, default: Date.now }
+    adoptedin: { type: Date, default: Date.now },
+    phoneno : { type: Number, required: true }
 });
 
 module.exports = model('pet', petSchema);

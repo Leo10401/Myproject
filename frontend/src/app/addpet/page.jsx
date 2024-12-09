@@ -15,6 +15,7 @@ const AddPet = () => {
       breed: '',
       details: '',
       image: '',
+      phoneno:'',
     },
     onSubmit: (values, { resetForm }) => {
       console.log(values);
@@ -60,11 +61,11 @@ const AddPet = () => {
 
   return (
     <div>
-      <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto flex flex-row">
-        <form onSubmit={addpet.handleSubmit}>
+      <div className="flex justify-center max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto  flex-row bg-white dark:bg-black">
+        <form className='bg-gray-300' onSubmit={addpet.handleSubmit}>
           {/* Contact Us */}
 
-          <div className="max-w-xl mx-auto">
+          <div className="max-w-xl  mx-auto">
             <div className="text-center">
               <h1 className="text-3xl font-bold text-gray-800 sm:text-4xl dark:text-white">
                 Add Your Pet
@@ -153,6 +154,22 @@ const AddPet = () => {
                         name="breed"
                         id="breed"
                         value={addpet.values.breed}
+                        onChange={addpet.handleChange}
+                        className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
+                      />
+                    </div>
+                    <div>
+                      <label
+                        htmlFor="breed"
+                        className="block mb-2 text-sm text-gray-700 font-medium dark:text-white"
+                      >
+                        Breed
+                      </label>
+                      <input
+                        type="text"
+                        name="Phone no."
+                        id="Phone no."
+                        value={addpet.values.phoneno}
                         onChange={addpet.handleChange}
                         className="py-3 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:placeholder-neutral-500 dark:focus:ring-neutral-600"
                       />

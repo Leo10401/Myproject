@@ -6,6 +6,7 @@ import toast from 'react-hot-toast';
 import * as Yup from 'yup';
 import "./style.css";
 import { useRouter } from 'next/navigation';
+import useAppContext from '@/context/AppContext';
 
 const SignupSchema = Yup.object().shape({
   name: Yup.string().required('Name is required')
@@ -23,6 +24,9 @@ const SignupSchema = Yup.object().shape({
 const App = () => {
   const [isActive, setIsActive] = useState(false);
   const [passwordHidden, setPasswordHidden] = useState(true);
+
+
+  const { setUserLoggedIn } = useAppContext();
 
   const router = useRouter();
 
@@ -97,6 +101,7 @@ const App = () => {
           toast.success('Login Success');
           console.log(result.data);
           localStorage.setItem('token', result.data.token);
+          setUserLoggedIn(true);
           router.push('/');
         }).catch((err) => {
           toast.error('Login Failed');

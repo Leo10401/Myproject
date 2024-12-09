@@ -3,6 +3,7 @@ import "./globals.css";
 
 import Sidebar from "./components/sidebar";
 import { Toaster } from "react-hot-toast";
+import { AppProvider } from "@/context/AppContext";
 
 
 const geistSans = localFont({
@@ -27,11 +28,14 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <Sidebar />
+        <AppProvider>
+        <Sidebar>
+          {children}
+        </Sidebar>
         <Toaster />
-        
-        {children}
-        
+        </AppProvider>
+
+
       </body>
     </html>
   );
