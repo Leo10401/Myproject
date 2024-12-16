@@ -94,16 +94,16 @@ router.delete('/delete/:id',  (req, res) => {
 router.post('/authenticate', (req, res) => {
     Model.findOne(req.body)
         .then((result) => {
-
+            
             if (result) {
                 // generate token
-                const { _id, email, password } = result;
-                const payload = { _id, email, password };
+                const { _id, email, password, name } = result;
+                const payload = { _id, email, password, name };
 
                 jwt.sign(
                     payload,
                     process.env.JWT_SECRET,
-                    { expiresIn: 10 },
+                    { expiresIn: '2 days' },
                     (err, token) => {
                         if (err) {
                             console.log(err);

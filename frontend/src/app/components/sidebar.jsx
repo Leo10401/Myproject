@@ -38,7 +38,7 @@ const Sidebar = ({ children }) => {
       )
     } else {
       return <a href="/login">
-        <i class='bx bx-log-in bx-tada bx-rotate-180' >Login</i>
+        <i class='bx bx-log-in icon bx-tada bx-rotate-180' >Login</i>
         
         </a>
 
@@ -78,8 +78,9 @@ const Sidebar = ({ children }) => {
                     <path d="M12 22C17.5 22 22 17.5 22 12C22 6.5 17.5 2 12 2C6.5 2 2 6.5 2 12C2 17.5 6.5 22 12 22Z" strokeWidth="1.5" />
                     <path d="M8 12H16" strokeWidth="1.5" />
                     <path d="M12 16V8" strokeWidth="1.5" />
-                  </svg>
-                </span>
+                  </svg> 
+                </span>                    
+                <span className="text nav-text">Give Pet</span>
 
 
                 </li>
@@ -101,7 +102,7 @@ const Sidebar = ({ children }) => {
                       <path d="M16.456 6.733c.214 -1.376 -.375 -2.594 -1.32 -2.722a1.164 1.164 0 0 0 -.162 -.011c-.885 0 -1.728 .97 -1.93 2.267c-.214 1.376 .375 2.594 1.32 2.722c.054 .007 .108 .011 .162 .011c.885 0 1.73 -.974 1.93 -2.267z" />
                       <path d="M5.69 12.918c.816 -.352 1.054 -1.719 .536 -3.052c-.436 -1.124 -1.271 -1.866 -2.009 -1.866c-.14 0 -.277 .027 -.407 .082c-.816 .352 -1.054 1.719 -.536 3.052c.436 1.124 1.271 1.866 2.009 1.866c.14 0 .277 -.027 .407 -.082z" />
                     </svg>
-                    <span className="text nav-text">Your Pets</span>
+                    <span className="text nav-text">All Pets</span>
                   </a>
                 </li>
               </ul>

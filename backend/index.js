@@ -3,6 +3,7 @@ const app = express();
 const port = 5000;
 const userRouter = require('./routers/userRouter');
 const petRouter = require('./routers/petrouter');
+const feedbackRouter = require('./routers/feedbackrouter');
 const cors = require('cors');
 
 app.use(cors({
@@ -13,6 +14,7 @@ app.use(express.json());
 
 app.use('/user', userRouter);
 app.use('/pet', petRouter);
+app.use('/feed', feedbackRouter);
 
 
 app.get('/', (req, res) => {

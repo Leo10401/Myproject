@@ -6,7 +6,7 @@ const petSchema = new Schema({
     age: { type: Number, required: true },
     breed : {type: String},
     image: String,
-    detail : {type: String},
+    details : {type: String},
     adoptedin: { type: Date, default: Date.now },
     phoneno : { type: Number, required: true }
 });
